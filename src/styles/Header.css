@@ -20,3 +20,16 @@
     padding-top: 10px;
     font-size: 30px;
 }
+
+.clicked-button {
+    width: 150px;
+    height: 150px;
+    box-shadow: -11px 13px rgba(0, 128, 128, 0.4);
+    transform: translate(10px, -10px);
+    background-color: brown;
+    color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

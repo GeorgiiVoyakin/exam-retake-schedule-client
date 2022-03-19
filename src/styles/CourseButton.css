@@ -12,4 +12,5 @@
 .course-button:hover {
     box-shadow: -11px 13px rgba(0, 128, 128, 0.4);
     transform: translate(10px, -10px);
+    background-color: brown;
 }

@@ -1,6 +1,5 @@
-function tableRow(props) {
+function TableRow(props) {
     const elements = [];
-    console.log(props.data);
     for (let index = 0; index < props.data.length; index++) {
         elements.push(<td>{props.data[index]}</td>);
     }
@@ -11,4 +10,4 @@ function tableRow(props) {
     );
 }
 
-export default tableRow;
+export default TableRow;

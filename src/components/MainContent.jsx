@@ -2,13 +2,13 @@ import SearchBox from "./SearchBox";
 import Table from "./Table"
 import "../styles/MainContent.css";
 
-function mainContent() {
+function MainContent(props) {
     return (
         <div className="main-content">
             <SearchBox></SearchBox>
-            <Table></Table>
+            <Table course={props.course}></Table>
         </div>
     );
 }
 
-export default mainContent;
+export default MainContent;

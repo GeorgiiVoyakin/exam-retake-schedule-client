@@ -1,10 +1,15 @@
 import CourseButton from "./CourseButton";
 import "../styles/Header.css"
+import { Link } from "react-router-dom";
 
-function header() {
+function Header() {
     const buttons = [];
     for (let index = 1; index <= 4; index++) {
-        buttons.push(<CourseButton number={index}></CourseButton>)
+        buttons.push(
+            <Link to={"/course/"+index}  style={{ textDecoration: 'none' }}>
+                <CourseButton number={index} key={index}></CourseButton>
+            </Link>
+        )
     }
     return (
         <div>
@@ -13,10 +18,10 @@ function header() {
                 <p>Выбор курса</p>
             </div>
             <div className="course-buttons">
-            {buttons}
+                {buttons}
             </div>
         </div>
     );
 }
 
-export default header;
+export default Header;
