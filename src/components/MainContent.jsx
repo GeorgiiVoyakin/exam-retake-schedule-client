@@ -10,7 +10,7 @@ function MainContent(props) {
     const [inputValue, setInputValue] = useState("");
 
     useEffect(() => {
-        axios.get("http://localhost:8080/api/schedule/retake_info?course="+props.course)
+        axios.get("http://localhost:8080/api/schedule/retake_info?course=" + props.course)
             .then(
                 response => {
                     console.log("RESPONSE :" + JSON.stringify(response));
@@ -19,10 +19,11 @@ function MainContent(props) {
                 error => {
                     console.error("Failed to execute request: " + error);
                 })
+        setInputValue("");
     }, [props.course]);
 
     function search(data) {
-        return matchSorter(data, inputValue, {keys: ['date', 'time', 'place', 'note', 'teacher', 'group.*', 'subject', 'department']})
+        return matchSorter(data, inputValue, { keys: ['date', 'time', 'place', 'note', 'teacher', 'group.*', 'subject', 'department'] })
     }
 
     return (
