@@ -1,23 +1,7 @@
 import TableRow from "./TableRow";
 import "../styles/Table.css";
-import axios from "axios";
-import { useEffect, useState } from "react";
 
 function Table(props) {
-    const [retakeInfo, setRetakeInfo] = useState([]);
-
-    useEffect(() => {
-        axios.get("http://localhost:8080/api/schedule/retake_info?course="+props.course)
-            .then(
-                response => {
-                    console.log("RESPONSE :" + JSON.stringify(response));
-                    setRetakeInfo(response.data);
-                },
-                error => {
-                    console.error("Failed to execute request: " + error);
-                })
-    }, [props.course]);
-
     const tableHead = ["Кафедра", "Дисциплина", "Дата", "Время", "Номер аудитории", "Группы", "Преподаватель", "Примечание"];
 
     return (
@@ -25,7 +9,7 @@ function Table(props) {
             <table>
                 <thead><TableRow data={tableHead}></TableRow></thead>
                 <tbody>
-                    {retakeInfo.map(item => (
+                    {props.retakeInfo.map(item => (
                         <tr>
                             <td>{item.department}</td>
                             <td>{item.subject}</td>
