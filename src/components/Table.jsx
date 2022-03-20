@@ -18,7 +18,7 @@ function Table(props) {
                 })
     }, [props.course]);
 
-    const tableHead = ["Кафедра", "Дисциплина", "Дата", "Время", "Номер аудитории", "Группа", "Преподаватель", "Примечание"];
+    const tableHead = ["Кафедра", "Дисциплина", "Дата", "Время", "Номер аудитории", "Группы", "Преподаватель", "Примечание"];
 
     return (
         <div className="retake-table">
@@ -32,7 +32,7 @@ function Table(props) {
                             <td>{item.date}</td>
                             <td>{item.time}</td>
                             <td>{item.place}</td>
-                            <td>{item.group[0]}</td>
+                            <td>{item.group.join(", ")}</td>
                             <td>{item.teacher}</td>
                             <td>{item.note}</td>
                         </tr>
