@@ -7,15 +7,16 @@ function App() {
   const courses = [1, 2, 3, 4];
   return (
     <div className="App">
-     <Header></Header>
-     <Routes>
-       <Route path='/' element={<MainContent course={1}></MainContent>}/>
-       {
-         courses.map(course => (
-          <Route path={'/course/'+course} element={<MainContent course={course}></MainContent>}/>
-         ))
-       }
-     </Routes>
+      <Header></Header>
+      <Routes>
+        <Route path="/" element={<MainContent course={1}></MainContent>} />
+        {courses.map((course) => (
+          <Route
+            path={'/course/' + course}
+            element={<MainContent course={course}></MainContent>}
+          />
+        ))}
+      </Routes>
     </div>
   );
 }

@@ -1,35 +1,35 @@
 .course-buttons {
-    padding: 40px 15% 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  padding: 40px 15% 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(126, 186, 188);
-    height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(126, 186, 188);
+  height: 70px;
 }
 
 .regular-info-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-    font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  font-size: 30px;
 }
 
 .clicked-button {
-    width: 150px;
-    height: 150px;
-    box-shadow: -11px 13px rgba(0, 128, 128, 0.4);
-    transform: translate(10px, -10px);
-    background-color: brown;
-    color: white;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 150px;
+  height: 150px;
+  box-shadow: -11px 13px rgba(0, 128, 128, 0.4);
+  transform: translate(10px, -10px);
+  background-color: brown;
+  color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
